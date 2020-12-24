@@ -1,0 +1,14 @@
+<div *ngFor="let x of deleteItem; let index = index;" class="row mt-1" style="height:100px;"> 
+
+    <div class="col-3 d-none col-md-3 d-md-block"></div> 
+  
+    <div [ngClass]="{'myClass': !x.done, 'myClass2': x.done}"> 
+
+        <div class="col-9 text-white h3"><button (click)="ItemDetail(index)"  class="tb"><p>{{x.name}}</p></button></div>
+
+        <input (click)="FinalDelete(index)" type="button"
+        value="Delete" class="col-2 btn btn-danger"> 
+    </div> 
+
+        <div class="col-3 d-none col-md-3 d-md-block"></div> 
+   </div> 
